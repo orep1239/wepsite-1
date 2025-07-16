@@ -1,22 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
   <title>نظام تسجيل الطلاب</title>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-  <link rel="stylesheet" href="css/style.css">
-<script src="css/script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
 </head>
 <body>
-<img src="logo.png.png" class="mig" alt="" srcset="">
   <h1>نظام تسجيل الطلاب</h1>
   <input type="text" id="search" placeholder="ابحث عن طالب...">
   <button onclick="openModal()">➕ إضافة طالب</button>
 
   <div id="studentsList"></div>
 
+  <!-- نافذة إضافة طالب -->
   <div class="modal" id="studentModal">
     <div class="modal-content">
       <h2>إضافة طالب</h2>
@@ -36,10 +34,24 @@
     </div>
   </div>
 
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-<script src="css/script.js"></script>
-    
+  <!-- نافذة ملف الطالب -->
+  <div class="modal" id="studentFileModal">
+    <div class="modal-content" id="studentFileContent">
+      <h2>📂 ملف الطالب</h2>
+      <div id="studentDetails"></div>
+      <div id="studentCourseDetails"></div>
+      <button onclick="closeStudentFile()">❌ إغلاق</button>
+    </div>
+  </div>
+
+<!-- مكتبات Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+
+<!-- كودك الخاص -->
+<script src="script.js"></script>
+
 </body>
 </html>
+
 
