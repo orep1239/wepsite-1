@@ -2,7 +2,7 @@
 const firebaseConfig = {
   databaseURL: "https://ahsnhadeeath-default-rtdb.firebaseio.com/"
 };
-
+alret(74)
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
